@@ -1,7 +1,7 @@
 from PIL import Image
-from fpdf import FPDF
+#from fpdf import FPDF
 from PIL import Image
-import os
+#import os
 BG = Image.open("myfont/bg.png")
 sizeOfSheet = BG.width
 gap, _ = 0, 0
@@ -28,7 +28,7 @@ def letterwrite(word):
             elif letter.isupper():
                 letter = letter.lower()
                 letter += 'upper'
-            elif special_char[letter] != None:
+            elif special_char.get(letter) != None:
                 letter = special_char[letter]
             writee(letter)
 
